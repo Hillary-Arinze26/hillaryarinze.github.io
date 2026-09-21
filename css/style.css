@@ -2231,6 +2231,7 @@
     grid-template-columns: 1fr;
     gap: var(--space-1);
   }
+
 } /* Responsive project card layout */
 .projects-grid,
 .project-grid,
