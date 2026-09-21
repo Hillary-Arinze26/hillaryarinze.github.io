@@ -2231,4 +2231,87 @@
     grid-template-columns: 1fr;
     gap: var(--space-1);
   }
+} /* Responsive project card layout */
+.projects-grid,
+.project-grid,
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+project-card {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Prevent images and embedded items from overflowing their cards */
+.project-card img,
+.project-card iframe,
+.project-card video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .projects-grid,
+  .project-grid,
+  .project-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* Phone */
+@media (max-width: 640px) {
+  .projects-grid,
+  .project-grid,
+  .project-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project-card {
+    width: 100%;
+  }
+}
+/* Improve spacing in the About Me section */
+.about-grid,
+.about-content,
+.about-layout {
+  align-items: start;
+}
+
+.about-intro,
+.profile-intro,
+.about-summary,
+.about-short-text {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.about-text,
+.about-copy,
+.about-details {
+  margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .about-grid,
+  .about-content,
+  .about-layout {
+    gap: 1.5rem;
+  }
+
+  .about-intro,
+  .profile-intro,
+  .about-summary,
+  .about-short-text {
+    margin-bottom: 1.25rem;
+  }
 }
