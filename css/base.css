@@ -1,0 +1,300 @@
+/* ============================================
+   BASE.CSS — Reset, tokens, and base styles
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  hanging-punctuation: first last;
+  scroll-padding-top: var(--space-16);
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+  font-family: var(--font-body, sans-serif);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  line-height: 1.15;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+  max-width: 72ch;
+}
+
+::selection {
+  background: oklch(from var(--color-primary) l c h / 0.25);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+a,
+button,
+[role='button'],
+[role='link'],
+input,
+textarea,
+select {
+  transition:
+    color var(--transition-interactive),
+    background var(--transition-interactive),
+    border-color var(--transition-interactive),
+    box-shadow var(--transition-interactive);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   DESIGN TOKENS
+   Custom palette: deep forest green + warm cream
+   Derived from the user's known dashboard style
+   (dark dashboard with green accents)
+   ============================================ */
+
+:root,
+[data-theme='light'] {
+  /* Type Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+  --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+  --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+  --text-hero: clamp(3rem, 0.5rem + 7vw, 8rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Surfaces — warm cream */
+  --color-bg: #f7f6f2;
+  --color-surface: #f9f8f5;
+  --color-surface-2: #fbfbf9;
+  --color-surface-offset: #f3f0ec;
+  --color-surface-offset-2: #edeae5;
+  --color-surface-dynamic: #e6e4df;
+  --color-divider: #dcd9d5;
+  --color-border: #d4d1ca;
+
+  /* Text */
+  --color-text: #28251d;
+  --color-text-muted: #7a7974;
+  --color-text-faint: #bab9b4;
+  --color-text-inverse: #f9f8f4;
+
+  /* Primary — deep forest green */
+  --color-primary: #0f5132;
+  --color-primary-hover: #0a3d26;
+  --color-primary-active: #062818;
+  --color-primary-highlight: #d4e8db;
+
+  /* Accent — jade */
+  --color-accent: #00a86b;
+  --color-accent-hover: #008f5a;
+
+  /* Secondary — gold */
+  --color-gold: #d19900;
+  --color-gold-hover: #b07a00;
+
+  /* Data viz colors */
+  --color-blue: #006494;
+  --color-orange: #da7101;
+  --color-purple: #7a39bb;
+  --color-success: #437a22;
+  --color-error: #a12c7b;
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
+  --shadow-md: 0 4px 12px oklch(0.2 0.01 80 / 0.08);
+  --shadow-lg: 0 12px 32px oklch(0.2 0.01 80 / 0.12);
+
+  /* Content widths */
+  --content-narrow: 640px;
+  --content-default: 960px;
+  --content-wide: 1200px;
+  --content-full: 100%;
+
+  /* Fonts */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Work Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* DARK MODE — deep forest dark */
+[data-theme='dark'] {
+  --color-bg: #0b0f0c;
+  --color-surface: #11161300;
+  --color-surface: #121815;
+  --color-surface-2: #161d19;
+  --color-surface-offset: #141a17;
+  --color-surface-offset-2: #1a221d;
+  --color-surface-dynamic: #232d27;
+  --color-divider: #1f2823;
+  --color-border: #2a342e;
+
+  --color-text: #d4dcd6;
+  --color-text-muted: #7a8a80;
+  --color-text-faint: #4a564f;
+  --color-text-inverse: #0b0f0c;
+
+  --color-primary: #4ec896;
+  --color-primary-hover: #3db87f;
+  --color-primary-active: #2da86e;
+  --color-primary-highlight: #1a2e22;
+
+  --color-accent: #00d97f;
+  --color-accent-hover: #00f08c;
+
+  --color-gold: #e8af34;
+  --color-gold-hover: #fdc551;
+
+  --color-blue: #5591c7;
+  --color-orange: #fdab43;
+  --color-purple: #a86fdf;
+  --color-success: #6daa45;
+  --color-error: #d163a7;
+
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.3);
+  --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.4);
+}
+
+/* System preference fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: #0b0f0c;
+    --color-surface: #121815;
+    --color-surface-2: #161d19;
+    --color-surface-offset: #141a17;
+    --color-surface-offset-2: #1a221d;
+    --color-surface-dynamic: #232d27;
+    --color-divider: #1f2823;
+    --color-border: #2a342e;
+    --color-text: #d4dcd6;
+    --color-text-muted: #7a8a80;
+    --color-text-faint: #4a564f;
+    --color-text-inverse: #0b0f0c;
+    --color-primary: #4ec896;
+    --color-primary-hover: #3db87f;
+    --color-primary-active: #2da86e;
+    --color-primary-highlight: #1a2e22;
+    --color-blue: #5dade2;
+    --color-blue-hover: #4aa3db;
+    --color-blue-active: #3a99d5;
+    --color-blue-highlight: #162632;
+    --color-accent: #00d97f;
+    --color-accent-hover: #00f08c;
+    --color-gold: #e8af34;
+    --color-gold-hover: #fdc551;
+    --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
+    --shadow-md: 0 4px 12px oklch(0 0 0 / 0.3);
+    --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.4);
+  }
+}

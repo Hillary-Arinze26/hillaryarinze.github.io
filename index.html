@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hillary Chidinma Arinze — Data Analyst, Business Analyst, International Relations Analyst. Portfolio showcasing analytics, higher education, research, and public service work." />
+  <meta property="og:title" content="Hillary Chidinma Arinze — Portfolio" />
+  <meta property="og:description" content="Data analytics, international relations, higher education, research, and public service — presented in one professional place." />
+  <meta property="og:type" content="website" />
+  <title>Hillary Chidinma Arinze — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
+
+  <!-- Chart.js for interactive data visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon: bar chart + line graph mark -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2300A86B'/><rect x='22' y='52' width='10' height='28' rx='3' fill='white' opacity='0.6'/><rect x='36' y='40' width='10' height='40' rx='3' fill='white' opacity='0.8'/><rect x='50' y='28' width='10' height='52' rx='3' fill='white'/><rect x='64' y='44' width='10' height='36' rx='3' fill='white' opacity='0.7'/><path d='M20 56 Q35 48 50 32 T80 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round'/></svg>" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#home" class="logo" aria-label="Home">
+        <svg class="logo__mark" width="32" height="32" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <rect width="100" height="100" rx="22" fill="currentColor" opacity="0.12"/>
+          <rect x="22" y="52" width="10" height="28" rx="3" fill="currentColor" opacity="0.5"/>
+          <rect x="36" y="40" width="10" height="40" rx="3" fill="currentColor" opacity="0.7"/>
+          <rect x="50" y="28" width="10" height="52" rx="3" fill="currentColor" opacity="0.85"/>
+          <rect x="64" y="44" width="10" height="36" rx="3" fill="currentColor" opacity="0.6"/>
+          <path d="M20 56 Q35 48 50 32 T80 24" fill="none" stroke="#1a5276" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo__text">Hillary C. Arinze</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Toolkit</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#resume" class="nav__link">Resume</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__social">
+        <a href="https://www.linkedin.com/in/hillary-arinze-a50a30328" class="header__social-link" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.37 4.26 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://mavenshowcase.com/profile/a811d330-d0b1-7087-226a-f9a11afc745c" class="header__social-link" target="_blank" rel="noopener" aria-label="Maven Analytics profile" title="Maven Analytics">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </a>
+        <a href="https://x.com/Hilly8k" class="header__social-link" target="_blank" rel="noopener" aria-label="X (Twitter) profile" title="X (Twitter)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== MOBILE NAV ========== -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#home" class="mobile-nav__link">Home</a>
+      <a href="#about" class="mobile-nav__link">About</a>
+      <a href="#skills" class="mobile-nav__link">Toolkit</a>
+      <a href="#projects" class="mobile-nav__link">Projects</a>
+      <a href="#resume" class="mobile-nav__link">Resume</a>
+      <a href="#contact" class="mobile-nav__link">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ========== HERO / HOME ========== -->
+    <section class="hero" id="home">
+      <div class="hero__bg-pattern" aria-hidden="true"></div>
+      <div class="hero__bg-dashboard" aria-hidden="true">
+        <!-- Realistic dashboard charts with numbers -->
+
+        <!-- Card 1: Bar chart with value labels -->
+        <div class="hero__dash-card hero__dash-card--1">
+          <div class="hero__dash-chart-label">Revenue Q1</div>
+          <div class="hero__dash-bars">
+            <div class="hero__dash-bar-col"><span class="hero__dash-bar-val">42</span><div class="hero__dash-bar" style="height: 40%"></div></div>
+            <div class="hero__dash-bar-col"><span class="hero__dash-bar-val">68</span><div class="hero__dash-bar" style="height: 65%"></div></div>
+            <div class="hero__dash-bar-col"><span class="hero__dash-bar-val">31</span><div class="hero__dash-bar" style="height: 30%"></div></div>
+            <div class="hero__dash-bar-col"><span class="hero__dash-bar-val">84</span><div class="hero__dash-bar" style="height: 80%"></div></div>
+            <div class="hero__dash-bar-col"><span class="hero__dash-bar-val">52</span><div class="hero__dash-bar" style="height: 50%"></div></div>
+          </div>
+        </div>
+
+        <!-- Card 2: Line chart with data points -->
+        <div class="hero__dash-card hero__dash-card--2">
+          <div class="hero__dash-chart-label">Attrition Trend</div>
+          <svg viewBox="0 0 100 30" preserveAspectRatio="none" class="hero__dash-line">
+            <polyline points="0,22 14,16 28,19 42,8 56,12 70,4 84,9 100,6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="42" cy="8" r="1.5" fill="currentColor"/>
+            <circle cx="70" cy="4" r="1.5" fill="currentColor"/>
+          </svg>
+          <div class="hero__dash-chart-footer">12% rate</div>
+        </div>
+
+        <!-- Card 3: KPI cards with numbers -->
+        <div class="hero__dash-card hero__dash-card--3">
+          <div class="hero__dash-kpi-label">Headcount</div>
+          <div class="hero__dash-kpi-big">184</div>
+          <div class="hero__dash-kpi-delta">+8 this Q</div>
+        </div>
+
+        <!-- Card 4: Donut chart with percentage -->
+        <div class="hero__dash-card hero__dash-card--4">
+          <div class="hero__dash-chart-label">Engagement</div>
+          <div class="hero__dash-donut-wrap">
+            <div class="hero__dash-donut"></div>
+            <span class="hero__dash-donut-val">78%</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Horizontal bar chart -->
+        <div class="hero__dash-card hero__dash-card--5">
+          <div class="hero__dash-chart-label">Dept Headcount</div>
+          <div class="hero__dash-hbar-row"><span class="hero__dash-hbar-label">Sales</span><div class="hero__dash-hbar" style="width: 85%"></div><span class="hero__dash-hbar-val">32</span></div>
+          <div class="hero__dash-hbar-row"><span class="hero__dash-hbar-label">IT</span><div class="hero__dash-hbar" style="width: 70%"></div><span class="hero__dash-hbar-val">28</span></div>
+          <div class="hero__dash-hbar-row"><span class="hero__dash-hbar-label">Ops</span><div class="hero__dash-hbar" style="width: 60%"></div><span class="hero__dash-hbar-val">25</span></div>
+        </div>
+
+        <!-- Card 6: KPI with salary -->
+        <div class="hero__dash-card hero__dash-card--6">
+          <div class="hero__dash-kpi-label">Avg Salary</div>
+          <div class="hero__dash-kpi-big">$79K</div>
+          <div class="hero__dash-kpi-delta">Median $79K</div>
+        </div>
+
+        <!-- Card 7: Scatter plot -->
+        <div class="hero__dash-card hero__dash-card--7">
+          <div class="hero__dash-chart-label">Salary vs Tenure</div>
+          <div class="hero__dash-scatter">
+            <span style="top: 20%; left: 15%;"></span>
+            <span style="top: 50%; left: 40%;"></span>
+            <span style="top: 70%; left: 70%;"></span>
+            <span style="top: 30%; left: 65%;"></span>
+            <span style="top: 60%; left: 20%;"></span>
+            <span style="top: 15%; left: 55%;"></span>
+            <span style="top: 45%; left: 85%;"></span>
+            <span style="top: 80%; left: 50%;"></span>
+          </div>
+        </div>
+
+        <!-- Card 8: Mini table -->
+        <div class="hero__dash-card hero__dash-card--8">
+          <div class="hero__dash-chart-label">Hires vs Terms</div>
+          <div class="hero__dash-table">
+            <div class="hero__dash-table-row"><span>Hires</span><span class="hero__dash-table-val">128</span></div>
+            <div class="hero__dash-table-row"><span>Terms</span><span class="hero__dash-table-val">42</span></div>
+            <div class="hero__dash-table-row"><span>Net</span><span class="hero__dash-table-val">+86</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__name">Hillary Chidinma Arinze</h1>
+        <p class="hero__roles">Data Analyst · Business Analyst · International Relations Analyst · Higher Education · Research · Public Service</p>
+        <h2 class="hero__title">
+          Turning data into <em>clear decisions.</em>
+        </h2>
+        <p class="hero__subtitle">
+          I'm a data analyst with a Master's in History and a Bachelor's in International Relations, along with a certification in data analytics. I build dashboards, clean messy datasets, and tell stories with numbers that support education, policy, and nonprofit work.
+        </p>
+        <div class="hero__actions">
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hillary.arinze26%40gmail.com" class="btn btn--primary" target="_blank" rel="noopener">Get in Touch</a>
+          <a href="#projects" class="btn btn--ghost">View My Work</a>
+          <a href="assets/resume.pdf" class="btn btn--ghost" download>Download Resume</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="5">0</span>
+            <span class="hero__stat-label">Portfolio Projects</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="5">0</span>
+            <span class="hero__stat-label">Tools Mastered</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="2">0</span>
+            <span class="hero__stat-label">Domains</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="1" width="14" height="22" rx="7"/><line x1="8" y1="6" x2="8" y2="10"/></svg>
+      </div>
+    </section>
+
+    <!-- ========== TOOLS STRIP (Marquee) ========== -->
+    <section class="tools-strip" id="tools" aria-label="Tools I work with">
+      <div class="tools-strip__label">Tools I work with</div>
+      <div class="tools-strip__marquee">
+        <div class="tools-strip__track" id="toolsTrack">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+    <div class="tools-popover" hidden></div>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">About Me</p>
+          <h2 class="section__title">Where analytics meets purpose</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__photo-wrapper">
+            <div class="about__photo-placeholder" id="photoPlaceholder" style="display: none;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <p class="about__photo-hint">Add your photo here</p>
+              <p class="about__photo-instruction">Save as assets/profile.jpeg</p>
+            </div>
+            <img src="assets/profile.jpeg" alt="Hillary Chidinma Arinze" class="about__photo" onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';" />
+            <p class="about__availability">Open to remote, hybrid, freelance, and project-based opportunities.</p>
+          </div>
+          <div class="about__text">
+            <p>
+              I am a data analyst with a <strong>certification in Data Analytics</strong> and hands-on expertise in Power BI, Excel, Power Query, SQL, and Python. I build dashboards, clean messy datasets, and tell stories with numbers that support education, policy, and nonprofit work. Every spreadsheet, to me, is a window into real human decisions and community needs.
+            </p>
+            <p>
+              Previously, I earned my <strong>Master of Arts in History</strong> at the State University of New York at Geneseo, where my graduate thesis explored global power structures and economic diplomacy in a study of the semiconductor sector in the US China trade war from 2018 to 2025. Before that, I earned a <strong>Bachelor of Arts in History and International Studies</strong> from Ajayi Crowther University in Nigeria, with an undergraduate thesis examining Nigeria United States trade relations and the African Growth and Opportunity Act from 2015 to 2022.
+            </p>
+            <p>
+              I bring the same analytical rigor from historical research into data work, combining strong skills in research, writing, project management, mediation, and cross-cultural communication. I am deeply committed to community engagement and have volunteered at <strong>SUNY Geneseo's GREAT Day</strong>, multiple <strong>Diversity Summits</strong>, <strong>Livingston County Cares' Gumbo to Go</strong>, and the <strong>Rochester Aid Memorial Garden</strong>, where I helped clean and plant new bulbs.
+            </p>
+            <p>
+              My work continues to investigate how nations negotiate, collaborate, and compete within an increasingly complex international landscape, and how data can illuminate the path forward.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TOOLKIT & COMPETENCIES ========== -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Toolkit & Competencies</p>
+          <h2 class="section__title">Tools and skills I bring</h2>
+          <p class="section__lead">A blend of data analytics expertise, research methodology, policy analysis, and dispute resolution skills built across academic and professional settings.</p>
+        </div>
+
+        <div class="toolkit__grid">
+
+          <!-- Data & Analytics Tools -->
+          <div class="toolkit__card toolkit__card--green">
+            <div class="toolkit__card-header">
+              <div class="toolkit__card-icon toolkit__card-icon--chart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <h3 class="toolkit__card-title">Data & Analytics Tools</h3>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Data Querying & Processing</p>
+              <div class="toolkit__tags">
+                <span class="toolkit__tag">SQL</span>
+                <span class="toolkit__tag">Python</span>
+                <span class="toolkit__tag">Advanced Excel</span>
+                <span class="toolkit__tag">VS Code</span>
+              </div>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Data Visualization</p>
+              <div class="toolkit__tags">
+                <span class="toolkit__tag">Power BI</span>
+                <span class="toolkit__tag">Excel Charts</span>
+              </div>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Statistical Analysis</p>
+              <div class="toolkit__tags">
+                <span class="toolkit__tag">Excel Analysis</span>
+                <span class="toolkit__tag">SPSS</span>
+              </div>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Data Modeling & Exploration</p>
+              <div class="toolkit__tags">
+                <span class="toolkit__tag">Data Modeling</span>
+                <span class="toolkit__tag">Exploratory Data Analysis</span>
+                <span class="toolkit__tag">Power Query</span>
+              </div>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Archival & Academic Databases</p>
+              <div class="toolkit__tags">
+                <span class="toolkit__tag">JSTOR</span>
+                <span class="toolkit__tag">ProQuest</span>
+                <span class="toolkit__tag">HeinOnline</span>
+                <span class="toolkit__tag">LexisNexis</span>
+                <span class="toolkit__tag">Google Scholar</span>
+              </div>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Reference Management</p>
+              <div class="toolkit__tags">
+                <span class="toolkit__tag">Zotero</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analytical & Data Skills -->
+          <div class="toolkit__card toolkit__card--blue">
+            <div class="toolkit__card-header">
+              <div class="toolkit__card-icon toolkit__card-icon--chart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><polyline points="7 14 12 9 16 13 21 8"/></svg>
+              </div>
+              <h3 class="toolkit__card-title">Analytical & Data Skills</h3>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Quantitative Data Analysis</p>
+              <p class="toolkit__desc">Data cleaning, trend identification, pattern recognition, and statistical reasoning.</p>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Qualitative & Mixed-Methods Research</p>
+              <p class="toolkit__desc">Synthesizing complex text, primary sources, historical records, and numerical data.</p>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Data Storytelling</p>
+              <p class="toolkit__desc">Translating dense data sets and technical findings into clear, actionable narratives for stakeholders.</p>
+            </div>
+          </div>
+
+          <!-- Domain & Policy Competencies -->
+          <div class="toolkit__card toolkit__card--green">
+            <div class="toolkit__card-header">
+              <div class="toolkit__card-icon toolkit__card-icon--globe">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h3 class="toolkit__card-title">Domain & Policy Competencies</h3>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Geopolitical & Policy Analysis</p>
+              <p class="toolkit__desc">Assessing macro-environmental risks, international trends, diplomatic relations, and institutional behavior.</p>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Critical Evaluation & Source Verification</p>
+              <p class="toolkit__desc">Fact-checking, bias detection, contextual verification, and evaluating evidence reliability.</p>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Historical Contextualization</p>
+              <p class="toolkit__desc">Connecting long-term systemic patterns to current organizational and political issues.</p>
+            </div>
+          </div>
+
+          <!-- Interpersonal & Resolution Competencies -->
+          <div class="toolkit__card toolkit__card--blue">
+            <div class="toolkit__card-header">
+              <div class="toolkit__card-icon toolkit__card-icon--people">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="toolkit__card-title">Interpersonal & Resolution Competencies</h3>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Alternative Dispute Resolution (ADR)</p>
+              <p class="toolkit__desc">Facilitating consensus, de-escalating interpersonal and intergroup tension, and managing negotiations.</p>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Active Listening & Neutrality</p>
+              <p class="toolkit__desc">Identifying core interests behind surface positions and building trust across diverse teams.</p>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Policy & Professional Writing</p>
+              <p class="toolkit__desc">Crafting executive briefs, white papers, research reports, and strategic plans.</p>
+            </div>
+          </div>
+
+          <!-- Dispute Resolution & Communication Tools -->
+          <div class="toolkit__card toolkit__card--green">
+            <div class="toolkit__card-header">
+              <div class="toolkit__card-icon toolkit__card-icon--layers">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="toolkit__card-title">Dispute Resolution & Communication</h3>
+            </div>
+            <div class="toolkit__sub">
+              <p class="toolkit__sub-label">Mediation Frameworks</p>
+              <div class="toolkit__tags">
+                <span class="toolkit__tag">Facilitative Mediation</span>
+                <span class="toolkit__tag">Transformative Mediation</span>
+                <span class="toolkit__tag">Evaluative Mediation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Portfolio</p>
+          <h2 class="section__title">Selected projects</h2>
+          <p class="section__lead">A mix of data analytics dashboards, research, and education-focused work. Click any project for details, tools, and outcomes.</p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="filters" role="group" aria-label="Project filters">
+          <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="powerbi">Power BI</button>
+          <button class="filter-btn" data-filter="excel">Excel</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="research">Research</button>
+          <button class="filter-btn" data-filter="education">Education</button>
+        </div>
+
+        <!-- Project cards grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RESUME ========== -->
+    <section class="section" id="resume">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <p class="section__eyebrow">Resume</p>
+          <h2 class="section__title">My professional background</h2>
+        </div>
+        <div class="resume__card">
+          <div class="resume__preview">
+            <span class="resume__preview-label">Preview</span>
+            <iframe src="assets/resume.pdf#page=1&view=FitH" title="Preview of Hillary Chidinma Arinze's resume"></iframe>
+          </div>
+          <div class="resume__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="resume__info">
+            <h3 class="resume__title">Resume — Hillary Chidinma Arinze</h3>
+            <p class="resume__desc">Download my full resume for a complete overview of my education, work experience, technical skills, and project history.</p>
+            <div class="resume__actions">
+              <a href="assets/resume.pdf" class="btn btn--primary" download>Download PDF</a>
+              <a href="assets/resume.pdf" class="btn btn--ghost" target="_blank" rel="noopener">View in Browser</a>
+            </div>
+            <p class="resume__hint" id="resumeHint"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section section--alt" id="contact">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <p class="section__eyebrow">Get in Touch</p>
+          <h2 class="section__title">Let's connect</h2>
+          <p class="section__lead">I'm actively seeking roles in data analytics, policy, advising, and nonprofit work. I'd love to hear from you.</p>
+        </div>
+        <div class="contact__grid">
+          <a href="mailto:hillary.arinze26@gmail.com" class="contact__card">
+            <div class="contact__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="contact__label">Email</p>
+              <p class="contact__value">hillary.arinze26@gmail.com</p>
+            </div>
+          </a>
+          <a href="https://github.com/" class="contact__card" target="_blank" rel="noopener">
+            <div class="contact__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div>
+              <p class="contact__label">GitHub</p>
+              <p class="contact__value">https://github.com/Hillary-Arinze26</p>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/hillary-arinze-a50a30328" class="contact__card" target="_blank" rel="noopener">
+            <div class="contact__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <p class="contact__label">LinkedIn</p>
+              <p class="contact__value">https://www.linkedin.com/in/hillary-arinze-a50a30328/</p>
+            </div>
+          </a>
+          <a href="https://x.com/Hilly8k" class="contact__card" target="_blank" rel="noopener">
+            <div class="contact__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </div>
+            <div>
+              <p class="contact__label">X (Twitter)</p>
+              <p class="contact__value">@Hilly8k</p>
+            </div>
+          </a>
+          <a href="https://mavenshowcase.com/profile/a811d330-d0b1-7087-226a-f9a11afc745c" class="contact__card" target="_blank" rel="noopener">
+            <div class="contact__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <p class="contact__label">Maven Analytics</p>
+              <p class="contact__value">View my showcase profile</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">&copy; <span id="year"></span> Hillary Chidinma Arinze. Built with care.</p>
+      <a href="#home" class="footer__back">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" aria-label="Close project details">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="image-lightbox__close" id="imageLightboxClose" type="button" aria-label="Close enlarged image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img class="image-lightbox__image" id="imageLightboxImage" alt="" />
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
