@@ -2237,3 +2237,175 @@
     margin-bottom: var(--space-1);
   }
 } 
+/* ============================================
+   Responsive portfolio and About Me refinements
+   ============================================ */
+
+/* Keep wide project cards from overflowing at tablet widths */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-card,
+  .project-card:first-child,
+  .project-card:nth-child(2),
+  .project-card:nth-child(3),
+  .project-card:nth-child(4) {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.15fr);
+    min-height: 0;
+    width: 100%;
+  }
+
+  .project-cardimage-wrap,
+  .project-card:first-child .project-cardimage-wrap,
+  .project-card:nth-child(2) .project-cardimage-wrap,
+  .project-card:nth-child(3) .project-cardimage-wrap,
+  .project-card:nth-child(4) .project-cardimage-wrap {
+    min-width: 0;
+    min-height: 280px;
+    height: auto;
+  }
+
+  /* Add breathing room after the photo and availability note */
+  .aboutgrid {
+    gap: var(--space-8);
+  }
+
+  .aboutphoto-wrapper {
+    margin-bottom: var(--space-2);
+  }
+
+  .aboutavailability {
+    margin-bottom: var(--space-4);
+  }
+
+  .abouttext {
+    width: 100%;
+  }
+}
+
+/* Phone layout: stack each project image above its text */
+@media (max-width: 700px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .projects-grid {
+    gap: var(--space-6);
+  }
+
+  .project-card,
+  .project-card:first-child,
+  .project-card:nth-child(2),
+  .project-card:nth-child(3),
+  .project-card:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-template-columns: none;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .project-cardimage-wrap,
+  .project-card:first-child .project-cardimage-wrap,
+  .project-card:nth-child(2) .project-cardimage-wrap,
+  .project-card:nth-child(3) .project-cardimage-wrap,
+  .project-card:nth-child(4) .project-cardimage-wrap {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .project-cardimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-cardcontent,
+  .project-card:first-child .project-cardcontent {
+    width: 100%;
+    min-width: 0;
+    padding: var(--space-6);
+  }
+
+  .project-cardtitle,
+  .project-card:first-child .project-cardtitle {
+    max-width: none;
+    font-size: clamp(1.65rem, 7vw, 2.25rem);
+  }
+
+  .project-cardkpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+
+  .project-cardkpi strong {
+    font-size: var(--text-base);
+  }
+
+  .project-cardkpi span {
+    font-size: 0.62rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* About Me: photo/availability first, then clearly separated text */
+  .aboutgrid {
+    gap: var(--space-10);
+  }
+
+  .aboutphoto-wrapper {
+    width: min(200px, 100%);
+    margin-bottom: 0;
+  }
+
+  .aboutphoto,
+  .aboutphoto-placeholder {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .aboutavailability {
+    width: min(280px, 100%);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-2);
+  }
+
+  .abouttext p {
+    margin-bottom: var(--space-6);
+    line-height: 1.8;
+  }
+}
+
+/* Very small phones: give KPI labels enough room to wrap */
+@media (max-width: 420px) {
+  .project-cardcontent,
+  .project-card:first-child .project-cardcontent {
+    padding: var(--space-5);
+  }
+
+  .project-cardkpis {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .project-cardkpi {
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .project-cardkpi:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
