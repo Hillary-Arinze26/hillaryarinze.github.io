@@ -1368,6 +1368,27 @@
   padding: clamp(var(--space-6), 4vw, var(--space-12));
 }
 
+@media (min-width: 901px) {
+  .project-card,
+  .project-card:first-child,
+  .project-card:nth-child(2),
+  .project-card:nth-child(3),
+  .project-card:nth-child(4) {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+
+  .project-card__image-wrap,
+  .project-card:first-child .project-card__image-wrap,
+  .project-card:nth-child(2) .project-card__image-wrap,
+  .project-card:nth-child(3) .project-card__image-wrap,
+  .project-card:nth-child(4) .project-card__image-wrap {
+    align-self: center;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}
+
 /* ---------- Demo Charts ---------- */
 .demo__grid {
   display: grid;
