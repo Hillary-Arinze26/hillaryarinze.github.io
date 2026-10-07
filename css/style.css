@@ -2473,6 +2473,12 @@
   }
 }
 
+  @media (max-width: 900px) {
+    .modal {
+      padding-top: 6rem;
+    }
+  }
+
 /* Keep project cards and details free of decorative icons. */
 .projects-grid .project-card::before,
 .projects-grid .project-card::after,
