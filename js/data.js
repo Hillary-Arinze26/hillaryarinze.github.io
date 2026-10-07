@@ -567,6 +567,103 @@ const PORTFOLIO_DATA = {
       links: [
         { label: 'Interact with the Power BI Dashboard', url: 'https://mavenshowcase.com/project/57676' }
       ]
+    },
+    {
+      id: 'transportation-operations',
+      title: 'Harbor Stone & Copper Logistics',
+      tags: ['powerbi'],
+      tagLabels: ['Power BI', 'Power Query', 'DAX'],
+      shortDesc: 'I developed a four-page Power BI report to bring revenue, delivery service, driver performance, fleet utilization, maintenance, safety, and seasonal demand into one transportation-business story. The report combines headline KPIs, trends, rankings, maps, scatter analysis, and detailed scorecards to support operational and commercial decisions.',
+      cardKpis: [
+        { label: 'Billed revenue', value: '~$299M' },
+        { label: 'Loads', value: '85,410' },
+        { label: 'On-time events', value: '~56%' }
+      ],
+      dashboardImages: [
+        { src: 'assets/Harbor Stone & Copper Logistics home.png', alt: 'Harbor Stone & Copper Logistics dashboard home page', caption: 'Executive Operations Overview' },
+        { src: 'assets/Harbor Stone & Copper Logistics Executive Overview.png', alt: 'Harbor Stone & Copper Logistics executive operations overview', caption: 'Executive Operations Overview' },
+        { src: 'assets/Harbor Stone & Copper Logistics Driver & Fleet Performance.png', alt: 'Harbor Stone & Copper Logistics driver and fleet performance dashboard', caption: 'Driver & Fleet Performance' },
+        { src: 'assets/Harbor Stone & Copper Logistics Route & Customer Profitability.png', alt: 'Harbor Stone & Copper Logistics route and customer profitability dashboard', caption: 'Route & Customer Profitability' },
+        { src: 'assets/Harbor Stone & Copper Logistics Maintenance, Safety & Seasonality.png', alt: 'Harbor Stone & Copper Logistics maintenance, safety, and seasonality dashboard', caption: 'Maintenance, Safety & Seasonality' }
+      ],
+      problem: 'Transportation businesses need to balance revenue growth with reliable delivery, efficient fleet use, fuel spending, maintenance needs, and safety exposure. This report brings those operational and commercial questions together while distinguishing billed revenue from recorded-cost contribution.',
+      projectOverviewTitle: 'Project overview',
+      projectOverviewText: 'I translated eight analytical use cases into four connected report pages. The report combines headline KPIs, trends, rankings, maps, scatter analysis, and detailed scorecards to support operational and commercial decisions.',
+      projectOverviewQuestions: [
+        'How is the business performing financially and operationally?',
+        'Which drivers and assets are productive, fuel-efficient, and costly to operate?',
+        'Which customers and lanes contribute the most revenue, and how does commercial performance vary?',
+        'Where are equipment costs, downtime, safety exposure, and demand patterns concentrated?'
+      ],
+      dashboardOverviewTitle: 'Harbor Stone & Copper Logistics Dashboard Overview',
+      dashboardOverviewRows: [
+        { page: 'Executive Operations Overview', purpose: 'Monitor revenue, load volume, delivery reliability, customer concentration, and route performance.' },
+        { page: 'Driver & Fleet Performance', purpose: 'Compare driver activity, truck utilization, fuel efficiency, and operating costs.' },
+        { page: 'Route & Customer Profitability', purpose: 'Explore customer value, lane revenue, revenue per load, revenue per mile, and service.' },
+        { page: 'Maintenance, Safety & Seasonality', purpose: 'Review maintenance exposure, downtime, incidents, damage costs, and monthly demand.' }
+      ],
+      dashboardKpisTitle: 'Displayed headline results',
+      dashboardKpisIntro: 'These figures represent the displayed report selection and should be interpreted with the data and attribution limitations below.',
+      dashboardKpis: [
+        { metric: 'Billed revenue', result: 'Approximately $299 million', meaning: 'Base freight, fuel surcharge, and accessorial revenue.' },
+        { metric: 'Recorded-cost gross profit', result: 'Approximately $197 million', meaning: 'Billed revenue less recorded fuel and maintenance costs only.' },
+        { metric: 'Recorded-cost gross margin', result: '66%', meaning: 'A contribution estimate, not complete accounting profit.' },
+        { metric: 'Loads', result: '85,410', meaning: 'Reported freight volume for the selected period.' },
+        { metric: 'On-time delivery rate', result: 'Approximately 56%', meaning: 'Based on the report event population; the eligible event definition should be verified.' },
+        { metric: 'Active trucks', result: '93', meaning: 'Active assets in the displayed reporting period.' }
+      ],
+      financialHealthTitle: 'Key findings',
+      financialHealthText: 'On-time delivery remains around 54%–57% across the displayed months, suggesting a persistent service issue rather than a single-month exception. First Group is the largest displayed customer at approximately $10 million. Fleet MPG stays within a narrow 6.42–6.48 range, while the truck-make scorecard shows maintenance cost per mile of approximately $0.058 for Freightliner and $0.039 for Volvo; this descriptive difference needs context such as vehicle age, mileage, and duty cycle. Visible lane revenue per load ranges from approximately $1,353 for Atlanta–Chicago to $7,964 for Charlotte–Portland, while revenue per mile ranges from approximately $2.58 to $2.98. February is a recurring lower-volume month across the 2022–2024 comparison, but seasonality varies by year. The Driver Efficiency Ranking uses fuel cost per mile, where lower values indicate lower recorded cost.',
+      objectives: [
+        'Monitor billed revenue, load volume, and recorded-cost profitability.',
+        'Evaluate on-time delivery and customer service levels.',
+        'Compare driver productivity, fleet utilization, and fuel efficiency.',
+        'Identify differences in revenue per load and revenue per mile.',
+        'Analyze maintenance costs, downtime, incident composition, and damage costs.',
+        'Compare monthly demand patterns across 2022, 2023, and 2024.'
+      ],
+      tools: [
+        'Power BI Desktop for the interactive four-page report.',
+        'Power Query for data cleaning and type standardization.',
+        'DAX for reusable measures and the master Date table.'
+      ],
+      technicalSkills: [
+        'Multi-table data preparation and relationship modeling.',
+        'Date normalization and time-intelligence attributes.',
+        'DAX measure development and validation.',
+        'Revenue, service, fleet, fuel, maintenance, and safety analysis.',
+        'Interactive dashboard design, navigation, filters, and conditional formatting.'
+      ],
+      dataPreparation: [
+        'Reviewed and prepared 14 source tables covering loads, trips, drivers, fleet, customers, routes, fuel, maintenance, delivery events, safety incidents, and monthly metrics.',
+        'Standardized missing driver, truck, and trailer assignments as Unassigned to retain valid operational cost records.',
+        'Corrected numeric and date field types and linked the model to a master Date table.',
+        'Tested measure behavior to reduce double-counting across load-, trip-, and purchase-level data.'
+      ],
+      dataPreparationNote: 'The model connects operational records at different levels of detail. Revenue per mile and cost measures require careful filter and relationship validation so load revenue, trip mileage, and purchase-level fuel expenses are not incorrectly combined.',
+      recommendationsTitle: 'Recommendations',
+      recommendationsIntro: 'Use the report to guide follow-up analysis rather than treat descriptive comparisons as causal findings.',
+      salesRecommendations: [
+        'Investigate late delivery events by route, customer, facility, and driver after confirming the eligible on-time event definition.',
+        'Review service performance for high-revenue customers and compare lane revenue per mile with distance, fuel cost, and service demands.',
+        'Investigate trucks with high maintenance cost per mile and recurring downtime; validate manufacturer comparisons against asset age, mileage, duty cycle, and vehicle mix.',
+        'Review low-MPG, high-mileage assignments without assuming driver behavior is the cause, and validate incident preventability coding before prioritizing safety interventions.',
+        'Compare monthly load volume across years when planning maintenance and fleet availability.'
+      ],
+      limitations: 'Reporting limitations',
+      datasetLimitations: 'Interpretation and data quality',
+      datasetLimitationSections: [
+        { title: 'Recorded-cost contribution, not complete profit', text: 'Gross profit subtracts recorded fuel and maintenance from billed revenue. It excludes labor, insurance, tolls, depreciation, administration, and other costs that may not be present in the data. Customer and lane profit rankings require validated cost attribution.' },
+        { title: 'Fuel and service definitions', text: 'Fuel purchased is not the same as fuel consumed. MPG uses trip consumption while fuel spending uses purchase records. The on-time event population may include pickups or other events unless restricted to final deliveries.' },
+        { title: 'Descriptive comparisons', text: 'Manufacturer and driver comparisons do not establish causation. Monthly summary records may also be misleading when filtered to partial months.' },
+        { title: 'Validation priorities', text: 'The truck-make scorecard repeats 83,696 trips across manufacturers, which may indicate that the trips measure is not responding to the manufacturer filter. Total miles also differ across scorecards and KPI calculations; reconcile these figures or explain their filter and assignment differences before publication.' }
+      ],
+      finalTakeawayTitle: 'Portfolio takeaway',
+      finalTakeawayText: 'The central finding is that substantial billed revenue does not remove the need to improve operational performance. Delivery reliability, equipment downtime, safety exposure, and lane economics should be considered together. This capstone is a decision-support prototype; it does not claim that its recommendations have already generated savings or improved results.',
+      skills: ['Power BI', 'Power Query', 'DAX', 'Data Cleaning', 'Data Modeling', 'KPI Development', 'Fleet Analytics', 'Transportation Analytics', 'Dashboard Design', 'Analytical Storytelling'],
+      links: [
+        { label: 'Interact with the Power BI Dashboard', url: 'https://mavenshowcase.com/project/57970' }
+      ]
     }
   ],
 
