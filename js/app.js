@@ -144,12 +144,12 @@
     // Attach click handlers
     projectsGrid.querySelectorAll('.project-card').forEach(function (card) {
       card.addEventListener('click', function () {
-        openModal(card.getAttribute('data-project-id'));
+        openModal(card.getAttribute('data-project-id'), card);
       });
       card.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          openModal(card.getAttribute('data-project-id'));
+          openModal(card.getAttribute('data-project-id'), card);
         }
       });
     });
@@ -184,10 +184,12 @@
   const imageLightbox = document.getElementById('imageLightbox');
   const imageLightboxImage = document.getElementById('imageLightboxImage');
   const imageLightboxClose = document.getElementById('imageLightboxClose');
+  var projectCardToRestore = null;
 
-  function openModal(projectId) {
+  function openModal(projectId, trigger) {
     var project = projects.find(function (p) { return p.id === projectId; });
     if (!project) return;
+    projectCardToRestore = trigger || document.activeElement;
 
     var tagsHtml = project.tagLabels.map(function (tag) {
       return '<span class="modal__tag">' + tag + '</span>';
@@ -612,6 +614,9 @@
     modalOverlay.classList.remove('is-open');
     modalOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (projectCardToRestore && typeof projectCardToRestore.focus === 'function') {
+      projectCardToRestore.focus();
+    }
   }
 
   function openLightbox(image) {
