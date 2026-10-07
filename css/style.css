@@ -2241,7 +2241,7 @@
    Responsive portfolio and About Me refinements
    ============================================ */
 
-/* Keep wide project cards from overflowing at tablet widths */
+/* Keep project cards and the About Me column within tablet layouts. */
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -2252,41 +2252,53 @@
   .project-card:nth-child(2),
   .project-card:nth-child(3),
   .project-card:nth-child(4) {
+    display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.15fr);
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     min-height: 0;
     width: 100%;
   }
 
-  .project-cardimage-wrap,
-  .project-card:first-child .project-cardimage-wrap,
-  .project-card:nth-child(2) .project-cardimage-wrap,
-  .project-card:nth-child(3) .project-cardimage-wrap,
-  .project-card:nth-child(4) .project-cardimage-wrap {
+  .project-card__image-wrap,
+  .project-card:first-child .project-card__image-wrap,
+  .project-card:nth-child(2) .project-card__image-wrap,
+  .project-card:nth-child(3) .project-card__image-wrap,
+  .project-card:nth-child(4) .project-card__image-wrap {
+    width: 100%;
     min-width: 0;
-    min-height: 280px;
+    min-height: 0;
     height: auto;
+    aspect-ratio: 4 / 3;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 0;
   }
 
-  /* Add breathing room after the photo and availability note */
-  .aboutgrid {
+  .about__grid {
     gap: var(--space-8);
   }
 
-  .aboutphoto-wrapper {
-    margin-bottom: var(--space-2);
+  .about__photo-wrapper {
+    width: min(320px, 100%);
+    height: auto;
+    margin-bottom: 0;
   }
 
-  .aboutavailability {
+  .about__photo,
+  .about__photo-placeholder {
+    margin-inline: auto;
+  }
+
+  .about__availability {
+    width: 100%;
     margin-bottom: var(--space-4);
   }
 
-  .abouttext {
+  .about__text {
     width: 100%;
   }
 }
 
-/* Phone layout: stack each project image above its text */
+/* Stack project images above their content on phones. */
 @media (max-width: 700px) {
   .container {
     padding-inline: var(--space-4);
@@ -2310,11 +2322,11 @@
     min-height: 0;
   }
 
-  .project-cardimage-wrap,
-  .project-card:first-child .project-cardimage-wrap,
-  .project-card:nth-child(2) .project-cardimage-wrap,
-  .project-card:nth-child(3) .project-cardimage-wrap,
-  .project-card:nth-child(4) .project-cardimage-wrap {
+  .project-card__image-wrap,
+  .project-card:first-child .project-card__image-wrap,
+  .project-card:nth-child(2) .project-card__image-wrap,
+  .project-card:nth-child(3) .project-card__image-wrap,
+  .project-card:nth-child(4) .project-card__image-wrap {
     width: 100%;
     min-width: 0;
     min-height: 0;
@@ -2324,87 +2336,68 @@
     border-bottom: 1px solid var(--color-border);
   }
 
-  .project-cardimage {
+  .project-card__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .project-cardcontent,
-  .project-card:first-child .project-cardcontent {
+  .project-card__content,
+  .project-card:first-child .project-card__content {
     width: 100%;
     min-width: 0;
     padding: var(--space-6);
   }
 
-  .project-cardtitle,
-  .project-card:first-child .project-cardtitle {
+  .project-card__title,
+  .project-card:first-child .project-card__title {
     max-width: none;
     font-size: clamp(1.65rem, 7vw, 2.25rem);
   }
 
-  .project-cardkpis {
+  .project-card__kpis {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-2);
   }
 
-  .project-cardkpi strong {
+  .project-card__kpi strong {
     font-size: var(--text-base);
   }
 
-  .project-cardkpi span {
+  .project-card__kpi span {
     font-size: 0.62rem;
     white-space: normal;
     overflow-wrap: anywhere;
   }
 
-  /* About Me: photo/availability first, then clearly separated text */
-  .aboutgrid {
+  .about__grid {
     gap: var(--space-10);
   }
 
-  .aboutphoto-wrapper {
-    width: min(200px, 100%);
-    margin-bottom: 0;
-  }
-
-  .aboutphoto,
-  .aboutphoto-placeholder {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-  }
-
-  .aboutavailability {
-    width: min(280px, 100%);
-    margin-top: var(--space-4);
-    margin-bottom: var(--space-2);
-  }
-
-  .abouttext p {
+  .about__text p {
     margin-bottom: var(--space-6);
     line-height: 1.8;
   }
 }
 
-/* Very small phones: give KPI labels enough room to wrap */
+/* Very small phones: give KPI labels enough room to wrap. */
 @media (max-width: 420px) {
-  .project-cardcontent,
-  .project-card:first-child .project-cardcontent {
+  .project-card__content,
+  .project-card:first-child .project-card__content {
     padding: var(--space-5);
   }
 
-  .project-cardkpis {
+  .project-card__kpis {
     grid-template-columns: 1fr;
     gap: var(--space-3);
   }
 
-  .project-cardkpi {
+  .project-card__kpi {
     padding-bottom: var(--space-3);
     border-bottom: 1px solid var(--color-border);
   }
 
-  .project-cardkpi:last-child {
+  .project-card__kpi:last-child {
     padding-bottom: 0;
     border-bottom: 0;
   }
