@@ -1751,6 +1751,35 @@
   margin-top: var(--space-4);
 }
 
+@media (min-width: 901px) {
+  #resume .container--narrow {
+    max-width: var(--content-default);
+  }
+
+  .resume__card {
+    width: 100%;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+    grid-template-rows: auto;
+    align-items: center;
+  }
+
+  .resume__preview {
+    grid-column: 1;
+    grid-row: 1;
+    height: 300px;
+  }
+
+  .resume__icon {
+    display: none;
+  }
+
+  .resume__info {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+}
+
 /* ---------- Contact ---------- */
 .contact__grid {
   display: grid;
